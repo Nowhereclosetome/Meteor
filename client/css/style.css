@@ -1,0 +1,162 @@
+
+.text-info{
+  font-size: 2.7em;
+}
+img{
+  width: 130%;
+}
+#bs-example-navbar-collapse-10
+{
+  margin-left:24%;
+}
+body {
+  font: 12px/18px Tahoma, Verdana, sans-serif;
+  background-color:#efefef;
+  color:black;
+}
+p {
+  padding-top: 20px;
+  font-size: 1.5em;
+    text-align: left;
+
+}
+.container {
+  margin-top: 30px; /* отступаем сверху 50px и выравниваем по центру */
+  width: 30%;
+}
+.bubble { /* Это основной контейнер с закругленными уголками */
+
+  margin: 50px 50px 50px 50px ;
+  background: #fff;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 3px;
+  -moz-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+  position: relative;
+  z-index: 90; /* будет отображаться под лентой заголовка (класс .rectangle, у него z-index: 100) */
+}
+
+.rectangle {
+
+  background: #36c3f1;
+  width: 100%;
+  border-radius:3px;
+  -moz-box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.55);
+  -webkit-box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.55);
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.55);
+  z-index: 100; /* показываем над всеми элементами */
+
+  font-size: 30px;
+  line-height: 40px;
+  color: #fff;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.info {
+  margin-top: -10%;
+  padding: 50px 25px 15px 25px;
+  text-align: left;
+}
+.info h2 {
+  font-size: 20px;
+}
+/* Добавим стили для меню */
+
+h6 {
+  padding-top: 0px;
+  font-size: 14px;
+    text-align: left;
+
+}
+.bubble1
+ {
+  margin: 50px 50px 50px 50px ;
+  background: #fff;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 3px;
+  -moz-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+  position: relative;
+  z-index: 90; /* будет отображаться под лентой заголовка (класс .rectangle, у него z-index: 100) */
+}
+#login-form {
+	background-color: #363636;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	margin: 150px auto;
+	width: 300px;
+  font-family: 'Open Sans', sans-serif;
+	font-size: 16px;
+  -webkit-box-shadow:  0px 10px 20px 0px rgba(0, 0, 0, 0.3);
+   box-shadow:  0px 10px 20px 0px rgba(0, 0, 0, 0.3);
+
+}
+
+#login-form h1 {
+	background-color: #292829;
+	border-radius: 5px 5px 0px 0px;
+	-moz-border-radius: 5px 5px 0px 0px;
+	-webkit-border-radius: 5px 5px 0px 0px;
+	color: #fff;
+	padding: 20px;
+	text-align: center;
+	text-transform: uppercase;
+  font-family: 'Open Sans', sans-serif;
+	font-size: 14px;
+}
+
+#login-form fieldset {
+	border: none;
+	padding: 30px;
+	position: relative;
+}
+
+
+#login-form fieldset form {
+	overflow: hidden;
+	width: 300px;
+}
+
+#login-form fieldset form input{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	outline: none;
+  -webkit-appearance:none;
+  width: 260px;
+  align: center;
+  position: center;
+
+
+}
+#login-form fieldset form input{
+	border: 1px solid #292829;
+	border-top: none;
+	border-radius: 3px 3px 3px 3px;
+	-moz-border-radius: 3px 3px 3px 3px;
+	-webkit-border-radius: 3px 3px 3px 3px;
+	padding: 12px 10px;
+	width: 238px;
+  -webkit-appearance:none;
+}
+
+
+#login-form fieldset form input[type="button"] {
+	background-color: #ebebeb;
+	border: none;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	color: #404040;
+	cursor: pointer;
+	float: none;
+	font-weight: bold;
+	margin-top: 10px;
+	padding: 12px 12px;
+  -webkit-appearance: none;
+}
