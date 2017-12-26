@@ -4,10 +4,27 @@
   <!-- Блок для заголовка -->
     <div class="rectangle">РАСПИСАНИЕ  <i class="fa fa-table" aria-hidden="true"></i> </div>
     <div class="info"><!-- Основной контент -->
-
-        <h5>Названия пары<i class="fa fa-user-o" aria-hidden="true"></i></h5>
-        <h5>ФИО препод.<i class="fa fa-comments-o" aria-hidden="true"></i></h5>
-        <h5>телефон препод. <i class="fa fa-calendar-o" aria-hidden="true"></i></h5>
+  <button class="today">Сегодня</button>
+  <button class="monday">Понедельник</button>
+  <button class="tuesday">Вторник</button>
+  <button class="wednesday">Среда</button>
+  <button class="thursday">Четверг</button>
+  <button class="friday">Пятница</button>
+  <button class="saturday">Суббота</button>
+    {{#each schedule_data}}
+      {{#each lessons}}
+        {{#each first}}
+        <li>{{lesson}} {{time}}</li>
+        {{/each}}
+        {{#each second}}
+        <li>{{lesson}}{{time}}</li>
+        {{/each}}
+        {{#each third}}
+        <li>{{lesson}}{{time}}</li>
+        {{/each}}
+      {{/each}}
+    {{/each}}
+        
          <hr>
   <div id="demo4" class="collapse">
          <hr>

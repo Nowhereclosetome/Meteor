@@ -1,0 +1,35 @@
+
+<template name = 'schedule'>
+	<form name="data">
+		<p>Day</p>
+		<input type="text" id="day">
+		<p>Course</p>
+		<input type="text" id="course">
+		<ul>
+			<li id="first"><input type="text" id="firstles"><input type="text" id="firstt"></li>
+			<li id="second"><input type="text" id="secondles"><input type="text" id="secondt"></li>
+			<li id="third"><input type="text" id="thirdles"><input type="text" id="thirdt"></li>
+		</ul>
+		<input type="button" id="submit_Form" value="Отправить">
+	</form>
+	<div id="view">
+		{{#each schedule_data}}<p>Day</p>
+		{{day}}<p>Course</p>
+		{{course}}
+			{{#each lessons}}
+			<ul class="sched">
+				{{#each first}}
+				<li>{{lesson}} {{time}}</li>
+				{{/each}}
+				{{#each second}}
+				<li>{{lesson}}{{time}}</li>
+				{{/each}}
+				{{#each third}}
+				<li>{{lesson}}{{time}}</li>
+				{{/each}}
+			</ul>
+			{{/each}}
+		{{/each}}
+	</div>
+		
+</template>

@@ -3,10 +3,19 @@
       	<!-- Блок для заголовка -->
           <div class="rectangle">МОИ ПРЕДМЕТЫ <i class="fa fa-book" aria-hidden="true"></i> </div>
           <div class="info"><!-- Основной контент -->
-
-              <h5>Название пары  <i class="fa fa-user-o" aria-hidden="true"></i></h5>
-               <h5>Время пары  <i class="fa fa-user-o" aria-hidden="true"></i></h5>
-
+              {{#each discipline}}
+              {{#each lessons}}
+              {{#each first}}
+        <li>{{lesson}} {{time}}</li>
+        {{/each}}
+        {{#each second}}
+        <li>{{lesson}}{{time}}</li>
+        {{/each}}
+        {{#each third}}
+        <li>{{lesson}}{{time}}</li>
+        {{/each}}
+                {{/each}}
+                {{/each}}
                <hr>
 
 

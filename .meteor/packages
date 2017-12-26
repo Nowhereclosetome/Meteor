@@ -26,3 +26,5 @@ kadira:flow-router
 kadira:blaze-layout
 accounts-base
 accounts-password
+jquery
+raix:handlebar-helpers

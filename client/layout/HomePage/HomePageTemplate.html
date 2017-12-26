@@ -9,12 +9,21 @@
      }
     </style>
     {{> NavBar}}
-    {{> MyGroup}}
-    {{> MyDisciplines}}
-    {{> Notes}}
-    {{> TimeTable}}
-    {{> Changes}}
-    {{> Courses}}
+    {{#each cards}}
+      {{#if $eq cardname 'table'}}
+      {{> TimeTable}}
+      {{/if}}
+      {{#if $eq cardname 'disciplines'}}
+      {{> MyDisciplines}}
+      {{/if}}
+    {{/each}}
+    <button id="add_MyDisciplines">Предметы</button>
+    <button id="remove_MyDisciplines">Удалить предметы</button>
+    <button id="add_MyGroup">Группа</button>
+    <button id="remove_MyGroup">Удалить Группа</button>
+    <button id="add_TimeTable">Расписние</button>    
+    <button id="remove_TimeTable">Удалить расписние</button>
+    <div class="newCard"></div>
   </body>
 </template>
 
