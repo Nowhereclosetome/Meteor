@@ -160,3 +160,16 @@ h6 {
 	padding: 12px 12px;
   -webkit-appearance: none;
 }
+table{
+  text-align: center;
+}
+table th{
+  text-align: center;
+}
+table #fio{
+  width: 170px;
+  text-align: left;
+}
+table #group{
+  width: 100px;
+}

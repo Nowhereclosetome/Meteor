@@ -1,0 +1,40 @@
+<template name="RegStudent">
+  <div class="bubble col-sm-3 col-xm-3 ">
+       <!-- Блок для заголовка -->
+         <div class="rectangle">Регистрация нового студента <i class="fa fa-users" aria-hidden="true"></i> </div>
+         <div class="info"><!-- Основной контент -->
+
+             <h6>ФИО<i class="fa fa-user-o" aria-hidden="true"><input id="username" type="text" placeholder="ФИО студента"></i></h6>
+             <h6>Mail<i class="fa fa-user-o" aria-hidden="true"><input id="login-email" type="email" placeholder=email></i></h6>
+             <h6>Password<i class="fa fa-user-o" aria-hidden="true"><input id="password" type="password" placeholder="*****"></i></h6>
+             <h6>Курс<i class="fa fa-user-o" aria-hidden="true"><select id="course">
+               <option value="1">1</option>
+               <option value="2">2</option>
+               <option value="3">3</option>
+               <option value="4">4</option>
+             </select></i></h6>
+             <h6>Группа<i class="fa fa-user-o" aria-hidden="true"><select id="group">
+               <option value="ИБ-11-о">ИБ-11-о</option>
+               <option value="ИБ-21-о">ИБ-21-о</option>
+               <option value="ИБ-31-о">ИБ-31-о</option>
+               <option value="ИБ-41-о">ИБ-41-о</option>
+               <option value="ИБ-51-о">ИБ-51-о</option>
+             </select></i></h6>
+           <button id="register-btn" type="button" class="btn btn-info">Зарегистрировать</button>
+           <button id="remove-user-btn" type="button" class="btn btn-info">Удалить</button>
+         </div>
+  </div>
+</template>
+
+<template name="DataInUsers">
+  <div class="bubble col-sm-3 col-xm-3 ">
+       <!-- Блок для заголовка -->
+         <div class="rectangle">Ваши данные <i class="fa fa-users" aria-hidden="true"></i> </div>
+         <div class="info"><!-- Основной контент -->
+          <h6>ФИО {{currentUser.username}}</h6>
+          <h6>Курс {{currentUser.profile.course}}</h6>
+          <h6>Группа {{currentUser.profile.group}}</h6>
+          <h6>Статус {{currentUser.profile.role}}</h6>
+         </div>
+  </div>
+</template>

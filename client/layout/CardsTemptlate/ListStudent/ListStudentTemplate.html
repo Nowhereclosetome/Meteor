@@ -1,0 +1,29 @@
+<template name="UsersList">
+  <div class="bubble col-sm-3 col-xm-3 ">
+       <!-- Блок для заголовка -->
+         <div class="rectangle">Список пользователей<i class="fa fa-users" aria-hidden="true"></i> </div>
+<!-- Основной контент -->
+           <table>
+             <tr>
+               <th>ФИО</th>
+               <th>Курс</th>
+               <th>Группа</th>
+               <th>Роль</th>
+               <th>Почта</th>
+             </tr>
+           {{#each users}}
+           <tr>
+             <td id='fio'>{{username}}</td>
+             <td>{{profile.course}}</td>
+             <td id='group'>{{profile.group}}</td>
+             <td>{{profile.role}}</td>
+             <td>{{userEmail}}</td>
+             <button id='remove-user-btn'>Удалить</button>
+           </tr>
+
+           {{/each}}
+         </table>
+
+
+  </div>
+</template>

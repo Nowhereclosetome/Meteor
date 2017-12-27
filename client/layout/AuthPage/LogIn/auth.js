@@ -26,7 +26,7 @@ Template.auth.events({
         username = t.find('#username').value,
         password = t.find('#password').value;
 
-    Accounts.createUser({username:username,password:password,email:email},function(err){
+    Accounts.createUser({username:username,password:password,email:email,profile:{course:'none',group:'teacher',role:'administrator'}},function(err){
       console.log(err);
     });
 },

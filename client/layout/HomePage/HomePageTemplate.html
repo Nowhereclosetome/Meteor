@@ -9,21 +9,34 @@
      }
     </style>
     {{> NavBar}}
-    {{#each cards}}
-      {{#if $eq cardname 'table'}}
-      {{> TimeTable}}
-      {{/if}}
-      {{#if $eq cardname 'disciplines'}}
-      {{> MyDisciplines}}
-      {{/if}}
-    {{/each}}
-    <button id="add_MyDisciplines">Предметы</button>
-    <button id="remove_MyDisciplines">Удалить предметы</button>
-    <button id="add_MyGroup">Группа</button>
-    <button id="remove_MyGroup">Удалить Группа</button>
-    <button id="add_TimeTable">Расписние</button>    
-    <button id="remove_TimeTable">Удалить расписние</button>
-    <div class="newCard"></div>
+
+    <div class="container">
+      <button id="regStudent">Регистрация</button>
+      <button id="remove_regStudent">X</button>
+      <button id="userList">Список пользователей</button>
+      <button id="remove_userList">X</button>
+      <button id="add_MyDisciplines">Предметы</button>
+      <button id="remove_MyDisciplines">X</button>
+      <button id="add_MyGroup">Группа</button>
+      <button id="remove_MyGroup">X</button>
+      <button id="add_TimeTable">Расписние</button>
+      <button id="remove_TimeTable">X</button>
+      <div class="newCard"></div>
+    </div>
+      {{#each cards}}
+        {{#if $eq cardname 'table'}}
+        {{> TimeTable}}
+        {{/if}}
+        {{#if $eq cardname 'disciplines'}}
+        {{> MyDisciplines}}
+        {{/if}}
+        {{#if $eq cardname 'registerStudent'}}
+        {{>RegStudent}}
+        {{/if}}
+        {{#if $eq cardname 'listOfUsers'}}
+        {{>UsersList}}
+        {{/if}}
+      {{/each}}
   </body>
 </template>
 
