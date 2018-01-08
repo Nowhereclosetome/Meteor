@@ -20,6 +20,13 @@ switch (scheduleDay) {
 				break;
 		}
 
+Template.TimeTable.events({
+	"click #tuesday": function(){
+		scheduleDay = 'Вторник';
+	}
+
+});
+
 Template.TimeTable.helpers({
 	'schedule_data': function(){
 		return Lessons.find({day:scheduleDay});

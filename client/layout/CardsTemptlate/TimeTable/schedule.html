@@ -1,6 +1,9 @@
-
-<template name = 'schedule'>
-	<form name="data">
+<template name="ScheduleEdit">
+  <div class="clearfix"></div>
+  <div class="bubble1 col-sm-3 ">
+  <!-- Блок для заголовка -->
+    <div class="rectangle">РАСПИСАНИЕ  <i class="fa fa-table" aria-hidden="true"></i> </div>
+    <div class="info"><!-- Основной контент -->
 		<p>Day</p>
 		<input type="text" id="day">
 		<p>Course</p>
@@ -11,7 +14,6 @@
 			<li id="third"><input type="text" id="thirdles"><input type="text" id="thirdt"></li>
 		</ul>
 		<input type="button" id="submit_Form" value="Отправить">
-	</form>
 	<div id="view">
 		{{#each schedule_data}}<p>Day</p>
 		{{day}}<p>Course</p>
@@ -31,5 +33,14 @@
 			{{/each}}
 		{{/each}}
 	</div>
-		
+        
+         <hr>
+  <div id="demo4" class="collapse">
+         <hr>
+     </div>
+      <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo4">Подробнее</button>
+    </div>
+</div>
 </template>
+	
+		

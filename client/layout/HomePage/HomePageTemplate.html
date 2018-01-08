@@ -11,10 +11,14 @@
     {{> NavBar}}
 
     <div class="container">
-      <button id="regStudent">Регистрация</button>
-      <button id="remove_regStudent">X</button>
-      <button id="userList">Список пользователей</button>
-      <button id="remove_userList">X</button>
+      {{#if isAdmin}}
+        <button id="regStudent">Регистрация</button>
+        <button id="remove_regStudent">X</button>
+        <button id="userList">Список пользователей</button>
+        <button id="remove_userList">X</button>
+        <button id="se">Редактирование расписания</button>
+      <button id="ser">X</button>
+      {{/if}}
       <button id="add_MyDisciplines">Предметы</button>
       <button id="remove_MyDisciplines">X</button>
       <button id="add_MyGroup">Группа</button>
@@ -35,6 +39,9 @@
         {{/if}}
         {{#if $eq cardname 'listOfUsers'}}
         {{>UsersList}}
+        {{/if}}
+        {{#if $eq cardname 'ScheduleEdit'}}
+        {{>ScheduleEdit}}
         {{/if}}
       {{/each}}
   </body>

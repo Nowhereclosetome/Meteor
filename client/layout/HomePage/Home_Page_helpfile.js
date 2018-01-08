@@ -3,14 +3,31 @@ var last_Timetableid;
 import { Template } from 'meteor/templating';
 import { Meteor } from 'meteor/meteor';
 Template.HomePage.helpers({
-	'cards':function(){
+	isAdmin: function(){
+      var currentUserRole = Meteor.user().profile.role;
+      if(currentUserRole === 'administrator') return true;
+      else return false;
+  },
+  'cards':function(){
 		return Cards.find({username: Meteor.user().username});
-	}
+	},
+    'users': function(){
+      return users.find();
+    }
 });
 Template.registerHelper('if_eq', function (a, b) {
       return a === b;
     });
 Template.HomePage.events({
+  "click #se": function(){
+          Cards.insert({cardname:'ScheduleEdit', username: Meteor.user().username});
+          last_Disciplineid = function(){
+            return Cards.findOne({cardname:'ScheduleEdit', username: Meteor.user().username})._id;
+            }
+            },
+    "click #ser":function(){
+        Cards.remove({_id:Cards.findOne({cardname:'ScheduleEdit', username: Meteor.user().username})._id});
+    },
 	"click #regStudent": function(){
        		Cards.insert({cardname:'registerStudent', username: Meteor.user().username});
        		last_Disciplineid = function(){

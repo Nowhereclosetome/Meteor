@@ -1,20 +1,20 @@
-Template.schedule.helpers({
+Template.ScheduleEdit.helpers({
 	'schedule_data': function(){
 		return Lessons.find();
 	}
 
 });
 
-Template.schedule.events({
-	'click #submit_Form':function(event,template){
-		var Day = template.find('#day').value,
-		Course = template.find('#course').value,
-		firstp = template.find('#firstles').value,
-		secondp = template.find('#secondles').value,
-		thirdp = template.find('#thirdles').value,
-		firstt = template.find('#firstt').value,
-		secondt = template.find('#secondt').value,
-		thirdt = template.find('#thirdt').value;
+Template.ScheduleEdit.events({
+	'click #submit_Form':function(){
+		var Day = document.getElementById('day').value,
+		Course = document.getElementById('course').value,
+		firstp = document.getElementById('firstles').value,
+		secondp = document.getElementById('secondles').value,
+		thirdp = document.getElementById('thirdles').value,
+		firstt = document.getElementById('firstt').value,
+		secondt = document.getElementById('secondt').value,
+		thirdt = document.getElementById('thirdt').value;
 		Lessons.insert({day:Day, course: Course, lessons:[{first:[{lesson:firstp, time:firstt}],second:[{lesson:secondp, time:secondt}],third:[{lesson:thirdp, time:thirdt}]}]});
 	}
 
