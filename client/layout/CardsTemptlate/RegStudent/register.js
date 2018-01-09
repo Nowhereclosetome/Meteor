@@ -6,9 +6,6 @@ Template.RegStudent.events({
         password = t.find('#password').value,
         course = t.find('#course').value,
         group = t.find('#group').value;
-
-    Accounts.createUser({username:username,password:password,email:email,profile:{course:course,group:group,role:'student'}},function(err){
-      console.log(err);
-    });
+    Meteor.call('createNewUser',{username:username,password:password,email:email,profile:{course:course,group:group,role:'student'}});
 },
 })
