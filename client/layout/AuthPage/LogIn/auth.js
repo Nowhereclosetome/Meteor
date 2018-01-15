@@ -4,6 +4,11 @@ Template.auth.onCreated(function() {
     FlowRouter.go('home');
   }
 })
+Template.regadmin.onCreated(function() {
+  if(Meteor.loggingIn() || Meteor.userId()){
+    FlowRouter.go('home');
+  }
+})
 Template.auth.events({
     'click #login-button': function(e,t){
         var email = t.find('#login-email').value,

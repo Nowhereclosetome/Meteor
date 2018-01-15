@@ -19,7 +19,7 @@ switch (scheduleDay) {
 				scheduleDay = 'Суббота';
 				break;
 		}
-
+console.log(scheduleDay);
 Template.TimeTable.events({
 	"click #tuesday": function(){
 		scheduleDay = 'Вторник';

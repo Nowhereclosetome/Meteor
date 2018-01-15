@@ -25,6 +25,8 @@
       <button id="remove_MyGroup">X</button>
       <button id="add_TimeTable">Расписние</button>
       <button id="remove_TimeTable">X</button>
+      <button id="add_group">Группа</button>
+      <button id="remove_group">X</button>
       <div class="newCard"></div>
     </div>
       {{#each cards}}
@@ -42,6 +44,9 @@
         {{/if}}
         {{#if $eq cardname 'ScheduleEdit'}}
         {{>ScheduleEdit}}
+        {{/if}}
+        {{#if $eq cardname 'MyGroup'}}
+        {{>MyGroup}}
         {{/if}}
       {{/each}}
   </body>
