@@ -1,23 +1,17 @@
-<template name="TimeTable">
-  <script src="TimeTablehelpfile.js"></script>
+<template name = 'Choise'>
+	  <script src="TimeTablehelpfile.js"></script>
   <div class="clearfix"></div>
   <div class="bubble1 col-sm-3 ">
   <!-- Блок для заголовка -->
     <div class="rectangle">РАСПИСАНИЕ  <i class="fa fa-table" aria-hidden="true"></i> </div>
     <div class="info"><!-- Основной контент -->
-    {{#each schedule_data}}
-      {{#each lessons}}
-        {{#each first}}
-        <li>{{lesson}} {{time}}</li>
-        {{/each}}
-        {{#each second}}
-        <li>{{lesson}}{{time}}</li>
-        {{/each}}
-        {{#each third}}
-        <li>{{lesson}}{{time}}</li>
-        {{/each}}
-      {{/each}}
-    {{/each}}
+  <button id="today">Сегодня</button>
+  <button id="monday">Понедельник</button>
+  <button id="tuesday">Вторник</button>
+  <button id="wednesday">Среда</button>
+  <button id="thursday">Четверг</button>
+  <button id="friday">Пятница</button>
+  <button id="saturday">Суббота</button>
          <hr>
   <div id="demo4" class="collapse">
          <hr>

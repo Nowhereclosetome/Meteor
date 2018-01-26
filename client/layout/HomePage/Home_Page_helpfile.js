@@ -26,7 +26,7 @@ Template.HomePage.events({
             }
             },
     "click #ser":function(){
-        Cards.remove({_id:Cards.findOne({cardname:'ScheduleEdit', username: Meteor.user().username})._id});
+        Cards.remove(this._id);
     },
 	"click #regStudent": function(){
        		Cards.insert({cardname:'registerStudent', username: Meteor.user().username});
@@ -35,8 +35,7 @@ Template.HomePage.events({
        			}
             },
     "click #remove_regStudent":function(){
-    		Cards.remove({_id:Cards.findOne({cardname:'registerStudent', username: Meteor.user().username})._id});
-    },
+ Cards.remove(this._id);    },
 		"click #userList": function(){
 	       		Cards.insert({cardname:'listOfUsers', username: Meteor.user().username});
 	       		last_Disciplineid = function(){
@@ -44,8 +43,7 @@ Template.HomePage.events({
 	       			}
 	            },
 	    "click #remove_userList":function(){
-	    		Cards.remove({_id:Cards.findOne({cardname:'listOfUsers', username: Meteor.user().username})._id});
-	    },
+ Cards.remove(this._id);	    },
 	"click #add_MyDisciplines": function(){
        		Cards.insert({cardname:'disciplines', username: Meteor.user().username});
        		last_Disciplineid = function(){
@@ -53,17 +51,33 @@ Template.HomePage.events({
        			}
             },
     "click #remove_MyDisciplines":function(){
-    		Cards.remove({_id:Cards.findOne({cardname:'disciplines', username: Meteor.user().username})._id});
-    },
-    "click #add_TimeTable": function(){
-       		Cards.insert({cardname:'table', username: Meteor.user().username});
+ Cards.remove(this._id);    },
+    "click #add_MyGroup": function(){
+          Cards.insert({cardname:'MyGroup', username: Meteor.user().username});
+          last_Disciplineid = function(){
+            return Cards.findOne({cardname:'MyGroup', username: Meteor.user().username})._id;
+            }
+            },
+    "click #remove_MyGroup":function(){
+ Cards.remove(this._id);    },
+    "click #add_Choise": function(){
+       		Cards.insert({cardname:'choise', username: Meteor.user().username});
        		last_Timetableid = function(){
-       			return Cards.findOne({cardname:'table', username: Meteor.user().username})._id;
+       			return Cards.findOne({cardname:'choise', username: Meteor.user().username})._id;
        			}
             },
-    "click #remove_TimeTable":function(){
-    		Cards.remove({_id:Cards.findOne({cardname:'table', username: Meteor.user().username})._id});
-    },
+    "click #remove_Choise":function(){
+ Cards.remove(this._id);    },
+ "click #sqd":function(){
+ Cards.remove(this._id);    },
+    "click #addNote": function(){
+          Cards.insert({cardname:'note', username: Meteor.user().username});
+          last_Timetableid = function(){
+            return Cards.findOne({cardname:'note', username: Meteor.user().username})._id;
+            }
+            },
+    "click #removeNote":function(){
+ Cards.remove(this._id);    },
 		'click #remove-user-btn': function () {
   Meteor.users.remove({ _id: this._id }, function (error, result) {
     if (error) {

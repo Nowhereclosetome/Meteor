@@ -1,5 +1,6 @@
 <template name="HomePage">
   <body>
+    <div id="new"></div>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
        <link rel="stylesheet" type="text/html" href="css/style.css">
     <title>InfSec</title>
@@ -13,41 +14,71 @@
     <div class="container">
       {{#if isAdmin}}
         <button id="regStudent">Регистрация</button>
-        <button id="remove_regStudent">X</button>
         <button id="userList">Список пользователей</button>
-        <button id="remove_userList">X</button>
         <button id="se">Редактирование расписания</button>
-      <button id="ser">X</button>
       {{/if}}
       <button id="add_MyDisciplines">Предметы</button>
-      <button id="remove_MyDisciplines">X</button>
       <button id="add_MyGroup">Группа</button>
-      <button id="remove_MyGroup">X</button>
-      <button id="add_TimeTable">Расписние</button>
-      <button id="remove_TimeTable">X</button>
-      <button id="add_group">Группа</button>
-      <button id="remove_group">X</button>
+      <button id="add_Choise">Расписание</button>
+      <button id="addNote">Заметки</button>
+     
       <div class="newCard"></div>
     </div>
       {{#each cards}}
-        {{#if $eq cardname 'table'}}
-        {{> TimeTable}}
+        {{#if $eq cardname 'choise'}}
+        {{> Choise}}
+        <button id="remove_Choise">X</button>
         {{/if}}
         {{#if $eq cardname 'disciplines'}}
         {{> MyDisciplines}}
+        <button id="remove_MyDisciplines">X</button>
         {{/if}}
         {{#if $eq cardname 'registerStudent'}}
         {{>RegStudent}}
+         <button id="remove_regStudent">X</button>
         {{/if}}
         {{#if $eq cardname 'listOfUsers'}}
-        {{>UsersList}}
+        {{>UsersList}} 
+        <button id="remove_userList">X</button>
         {{/if}}
         {{#if $eq cardname 'ScheduleEdit'}}
-        {{>ScheduleEdit}}
+        {{>ScheduleEdit}} 
+        <button id="ser">X</button>
         {{/if}}
         {{#if $eq cardname 'MyGroup'}}
-        {{>MyGroup}}
+        {{> MyGroup}} 
+        <button id="remove_MyGroup">X</button>
         {{/if}}
+        {{#if $eq cardname 'note'}}
+        {{>Notes}} 
+        <button id="removeNote">X</button>
+        {{/if}}
+      {{/each}}
+       {{# each cards_sch}}
+         {{# if $eq day 'Пятница'}}
+      {{> Friday}}
+      <button id="sqd">X</button>
+         {{/if}}
+         {{# if $eq day 'Понедельник'}}
+      {{> Monday}}
+      <button id="sqd">X</button>
+         {{/if}}
+         {{# if $eq day 'Вторник'}}
+      {{> Tuesday}}
+      <button id="sqd">X</button>
+         {{/if}}
+         {{# if $eq day 'Среда'}}
+      {{> Wednesday}}
+      <button id="sqd">X</button>
+         {{/if}}
+         {{# if $eq day 'Четверг'}}
+      {{> Thursday}}
+      <button id="sqd">X</button>
+         {{/if}}
+         {{# if $eq day 'Суббота'}}
+      {{> Saturday}}
+      <button id="sqd">X</button>
+         {{/if}}
       {{/each}}
   </body>
 </template>
