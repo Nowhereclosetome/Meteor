@@ -15,6 +15,7 @@ Template.auth.events({
             password = t.find('#password').value;
         Meteor.loginWithPassword(email,password,function(err){
           if(err){
+            alert(err.reason);
             console.log(err.reason);
           }
           else{

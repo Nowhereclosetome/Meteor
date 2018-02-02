@@ -6,9 +6,52 @@
            <table>
              <tr>
                <th>ФИО</th>
-               <th>Курс</th>
-               <th>Группа</th>
-               <th>Роль</th>
+               <script>
+               var options="";
+                  $("#courseSelect").on('change',function(){
+                    var value=$(this).val();
+                    if(value=="1")
+                    {
+                      options='<option value="ИБ-11-о">ИБ-11-о</option>'
+                             +'<option value="ИБ-12-о">ИБ-12-о</option>';
+                        $("#groupSelect").html(options);
+                    }
+                    else if(value=="2")
+                    {
+                        options='<option value="ИБ-21-о">ИБ-21-о</option>'
+                               +'<option value="ИБ-22-о">ИБ-22-о</option>';
+                        $("#groupSelect").html(options);
+                    }
+                    else if(value=="3")
+                    {
+                        options='<option value="ИБ-31-о">ИБ-31-о</option>'
+                               +'<option value="ИБ-32-о">ИБ-32-о</option>';
+                        $("#groupSelect").html(options);
+                    }
+                    else if(value=="4")
+                    {
+                        options='<option value="ИБ-41-о">ИБ-41-о</option>'
+                               +'<option value="ИБ-42-о">ИБ-42-о</option>';
+                        $("#groupSelect").html(options);
+                    }
+                    else if(value=="5")
+                    {
+                        options='<option value="ИБ-41-о">ИБ-41-о</option>'
+                               +'<option value="ИБ-42-о">ИБ-42-о</option>';
+                        $("#groupSelect").html(options);
+                    }
+
+                  });
+               </script>
+               <th><h6>Курс<i><select id="courseSelect">
+                 <option value="1">1</option>
+                 <option value="2">2</option>
+                 <option value="3">3</option>
+                 <option value="4">4</option>
+                 <option value="5">5</option>
+               </select></i></h6></th>
+               <th><h6>Группа<i><select id="groupSelect">
+               </select></i></h6></th>
                <th>Почта</th>
              </tr>
            {{#each users}}

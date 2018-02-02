@@ -16,6 +16,5 @@ Template.ScheduleEdit.events({
 		secondt = document.getElementById('secondt').value,
 		thirdt = document.getElementById('thirdt').value;
 		Lessons.insert({day:Day, course: Course, lessons:[{first:[{lesson:firstp, time:firstt}],second:[{lesson:secondp, time:secondt}],third:[{lesson:thirdp, time:thirdt}]}]});
-	}
-
+	},
 });

@@ -2,23 +2,15 @@
   <div class="bubble1 col-sm-3 ">
         <!-- Блок для заголовка -->
           <div class="rectangle">ЗАМЕТКИ  <i class="fa fa-thumb-tack" aria-hidden="true"></i> </div>
-          <div class="info"><!-- Основной контент -->
 
-              <h5>Названия заметки <i class="fa fa-user-o" aria-hidden="true"></i></h5>
-              <h5>Напоминание <i class="fa fa-comments-o" aria-hidden="true"></i></h5>
-              <h5>Дата <i class="fa fa-calendar-o" aria-hidden="true"></i></h5>
-               <hr>
-        <div id="demo3" class="collapse">
           {{#each notes}}
           {{text}}
           <button id="delete">Удалить</button>
+          <hr>
           {{/each}}
           <input type="text" id="note_Text">
           <button id="add">Добавить</button>
                <hr>
-           </div>
-            <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo3">Подробнее</button>
-          </div>
           <button id="removeNote">del</button>
   </div>
 </template>

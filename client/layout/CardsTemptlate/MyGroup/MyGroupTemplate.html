@@ -3,14 +3,10 @@
        <!-- Блок для заголовка -->
          <div class="rectangle">МОЯ ГРУППА <i class="fa fa-users" aria-hidden="true"></i> </div>
          <div class="info"><!-- Основной контент -->
+           <h2>Одногруппники:</h2>
             {{#each group}}
              <h6>Имя: {{username}}<i class="fa fa-user-o" aria-hidden="true"></i></h6>
-             <h6><i class="fa fa-address-card-o" aria-hidden="true"></i>
-               <br><br>
-             <i class="fa fa-mobile" aria-hidden="true"></i>
-             </h6>
-              <hr>
               {{/each}}
          </div>
-         </div>     
+         </div>
 </template>

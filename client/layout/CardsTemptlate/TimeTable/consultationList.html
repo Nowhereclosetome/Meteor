@@ -1,0 +1,31 @@
+<template name="ConsultationList">
+  <div class="bubble col-sm-3 col-xm-3 ">
+  <!-- Блок для заголовка -->
+    <div class="rectangle">Список консультаций<i class="fa fa-table" aria-hidden="true"></i> </div>
+
+
+    <div id="view">
+      <table>
+        <caption>Список консультаций:</caption>
+        <tr>
+          <th>Преподаватель</th>
+          <th>Дата</th>
+          <th>Время</th>
+          <th>Аудитория</th>
+        </tr>
+        {{#each cons_data}}
+        <tr>
+          <td>{{teacher_name}}</td>
+          <td>{{date}}</td>
+          <td>{{time}}</td>
+          <td>{{audience}}</td>
+          {{#if isAdmin}}
+          <input type="button" id="remove_consultation" value ="Удалить">
+          {{/if}}
+        </tr>
+        {{/each}}
+      </table>
+
+  	</div>
+</div>
+</template>

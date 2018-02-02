@@ -16,18 +16,28 @@
         <button id="regStudent">Регистрация</button>
         <button id="userList">Список пользователей</button>
         <button id="se">Редактирование расписания</button>
+        <button id="consEdit">Редактирование консультаций</button>
       {{/if}}
       <button id="add_MyDisciplines">Предметы</button>
       <button id="add_MyGroup">Группа</button>
       <button id="add_Choise">Расписание</button>
       <button id="addNote">Заметки</button>
-     
+      <button id="add_ConsultationList">Консультации</button>
+
       <div class="newCard"></div>
     </div>
       {{#each cards}}
         {{#if $eq cardname 'choise'}}
         {{> Choise}}
         <button id="remove_Choise">X</button>
+        {{/if}}
+        {{#if $eq cardname 'ConsultationEdit'}}
+        {{>ConsultationEdit}}
+        <button id="remove_consEdit">X</button>
+        {{/if}}
+        {{#if $eq cardname 'ConsultationList'}}
+        {{>ConsultationList}}
+        <button id="remove_ConsultationList">X</button>
         {{/if}}
         {{#if $eq cardname 'disciplines'}}
         {{> MyDisciplines}}
@@ -38,19 +48,19 @@
          <button id="remove_regStudent">X</button>
         {{/if}}
         {{#if $eq cardname 'listOfUsers'}}
-        {{>UsersList}} 
+        {{>UsersList}}
         <button id="remove_userList">X</button>
         {{/if}}
         {{#if $eq cardname 'ScheduleEdit'}}
-        {{>ScheduleEdit}} 
+        {{>ScheduleEdit}}
         <button id="ser">X</button>
         {{/if}}
         {{#if $eq cardname 'MyGroup'}}
-        {{> MyGroup}} 
+        {{> MyGroup}}
         <button id="remove_MyGroup">X</button>
         {{/if}}
         {{#if $eq cardname 'note'}}
-        {{>Notes}} 
+        {{>Notes}}
         <button id="removeNote">X</button>
         {{/if}}
       {{/each}}

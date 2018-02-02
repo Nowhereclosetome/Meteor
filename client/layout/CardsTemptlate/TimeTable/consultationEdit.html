@@ -1,0 +1,37 @@
+<template name="ConsultationEdit">
+  <div class="bubble1 col-sm-3 ">
+  <!-- Блок для заголовка -->
+    <div class="rectangle">Добавление консультации<i class="fa fa-table" aria-hidden="true"></i> </div>
+    <div class="info"><!-- Основной контент -->
+		<p>Дата</p>
+		<input type="text" id="date">
+		<p>Время</p>
+		<input type="text" id="time">
+    <p>Аудитория</p>
+    <input type="text" id="audience">
+		<input type="button" id="add_consultation" value="Добавить">
+
+    <div id="view">
+      <table>
+        <caption>Список консультаций:</caption>
+        <tr>
+          <th>Преподаватель</th>
+          <th>Дата</th>
+          <th>Время</th>
+          <th>Аудитория</th>
+        </tr>
+        {{#each cons_data}}
+        <tr>
+          <td>{{teacher_name}}</td>
+          <td>{{date}}</td>
+          <td>{{time}}</td>
+          <td>{{audience}}</td>
+          <input type="button" id="remove_consultation" value ="Удалить">
+        </tr>
+        {{/each}}
+      </table>
+
+  	</div>
+</div>
+</div>
+</template>

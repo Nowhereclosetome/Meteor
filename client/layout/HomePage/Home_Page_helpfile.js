@@ -28,6 +28,24 @@ Template.HomePage.events({
     "click #ser":function(){
         Cards.remove(this._id);
     },
+  "click #consEdit": function(){
+          Cards.insert({cardname:'ConsultationEdit', username: Meteor.user().username});
+          last_Disciplineid = function(){
+            return Cards.findOne({cardname:'ConsultationEdit', username: Meteor.user().username})._id;
+            }
+            },
+    "click #remove_consEdit":function(){
+        Cards.remove(this._id);
+    },
+  "click #add_ConsultationList": function(){
+          Cards.insert({cardname:'ConsultationList', username: Meteor.user().username});
+          last_Disciplineid = function(){
+            return Cards.findOne({cardname:'ConsultationList', username: Meteor.user().username})._id;
+            }
+            },
+    "click #remove_ConsultationList":function(){
+        Cards.remove(this._id);
+    },
 	"click #regStudent": function(){
        		Cards.insert({cardname:'registerStudent', username: Meteor.user().username});
        		last_Disciplineid = function(){
