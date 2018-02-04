@@ -10,19 +10,53 @@
                <option value="student">student</option>
                <option value="administrator">administrator</option>
              </select></i></h6>
-             <h6>Курс<i class="fa fa-user-o" aria-hidden="true"><select id="course">
+
+             <script>
+             var options="";
+                $("#courseReg").on('change',function(){
+                  var value=$(this).val();
+                  if(value=="1")
+                  {
+                    options='<option value="ИБ-11-о">ИБ-11-о</option>'
+                           +'<option value="ИБ-12-о">ИБ-12-о</option>';
+                      $("#groupReg").html(options);
+                  }
+                  else if(value=="2")
+                  {
+                      options='<option value="ИБ-21-о">ИБ-21-о</option>'
+                             +'<option value="ИБ-22-о">ИБ-22-о</option>';
+                      $("#groupReg").html(options);
+                  }
+                  else if(value=="3")
+                  {
+                      options='<option value="ИБ-31-о">ИБ-31-о</option>'
+                             +'<option value="ИБ-32-о">ИБ-32-о</option>';
+                      $("#groupReg").html(options);
+                  }
+                  else if(value=="4")
+                  {
+                      options='<option value="ИБ-41-о">ИБ-41-о</option>'
+                             +'<option value="ИБ-42-о">ИБ-42-о</option>';
+                      $("#groupReg").html(options);
+                  }
+                  else if(value=="5")
+                  {
+                      options='<option value="ИБ-51-м">ИБ-51-м</option>';
+                      $("#groupReg").html(options);
+                  }
+
+                });
+             </script>
+
+             <h6>Курс<i><select id="courseReg">
+               <option value="-">-</option>
                <option value="1">1</option>
                <option value="2">2</option>
                <option value="3">3</option>
                <option value="4">4</option>
+               <option value="5">5</option>
              </select></i></h6>
-             <h6>Группа<i class="fa fa-user-o" aria-hidden="true"><select id="group">
-               <option value="ИБ-11-о">ИБ-11-о</option>
-               <option value="ИБ-21-о">ИБ-21-о</option>
-               <option value="ИБ-31-о">ИБ-31-о</option>
-               <option value="ИБ-41-о">ИБ-41-о</option>
-               <option value="ИБ-51-о">ИБ-51-о</option>
-             </select></i></h6>
+             <h6>Группа<i><select id="groupReg"><option>-</option></select></i></h6>
            <button id="register-btn" type="button" class="btn btn-info">Зарегистрировать</button>
            <button id="remove-user-btn" type="button" class="btn btn-info">Удалить</button>
          </div>
