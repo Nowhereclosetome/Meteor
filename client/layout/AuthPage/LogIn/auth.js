@@ -58,7 +58,7 @@ Template.regadmin.events({
     var email = t.find('#login-email').value,
         username = t.find('#username').value,
         password = t.find('#password').value;
-
+    Teachers.insert({name:username, position: 'here'});
     Accounts.createUser({username:username,password:password,email:email,profile:{course:'none',group:'teacher',role:'administrator'}},function(err){
       console.log(err);
     });

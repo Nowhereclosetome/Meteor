@@ -9,7 +9,16 @@
        color: #6f4897;
      }
     </style>
-    {{> NavBar}}
+
+    {{>NavBar}}
+
+    {{#if isAdmin}}
+       <div>
+      <form> <input name='position' type="radio" value ='onplace' id="here" checked>На месте
+      <input name="position" type="radio" value='notonplace' id="nothere"> Не на месте</form>
+     </div>
+    {{/if}}
+    
 
     <div class="container">
       {{#if isAdmin}}
@@ -20,6 +29,7 @@
       {{/if}}
       <button id="add_MyDisciplines">Предметы</button>
       <button id="add_MyGroup">Группа</button>
+      <button id="add_who">Преподаватели на месте</button>
       <button id="add_Choise">Расписание</button>
       <button id="addNote">Заметки</button>
       <button id="add_ConsultationList">Консультации</button>
@@ -27,6 +37,10 @@
       <div class="newCard"></div>
     </div>
       {{#each cards}}
+      {{#if $eq cardname 'who'}}
+        {{> whoishere}}
+        <button id="remove_who">X</button>
+      {{/if}}
         {{#if $eq cardname 'choise'}}
         {{> Choise}}
         <button id="remove_Choise">X</button>

@@ -1,0 +1,12 @@
+<template name="whoishere">
+  <div class="bubble col-sm-3 col-xm-3 ">
+       <!-- Блок для заголовка -->
+         <div class="rectangle">Преподаватели на месте <i class="fa fa-users" aria-hidden="true"></i> </div>
+         <div class="info"><!-- Основной контент -->
+           <h2>Преподаватели:</h2>
+            {{#each teachers}}
+             <h6>Имя: {{name}}<i class="fa fa-user-o" aria-hidden="true"></i></h6>
+              {{/each}}
+         </div>
+         </div>
+</template>

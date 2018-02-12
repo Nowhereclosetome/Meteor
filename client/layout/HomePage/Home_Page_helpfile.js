@@ -86,6 +86,17 @@ Template.HomePage.events({
             },
     "click #remove_Choise":function(){
  Cards.remove(this._id);    },
+
+"click #add_who": function(){
+          Cards.insert({cardname:'who', username: Meteor.user().username});
+          last_Timetableid = function(){
+            return Cards.findOne({cardname:'who', username: Meteor.user().username})._id;
+            }
+            },
+    "click #remove_who":function(){
+ Cards.remove(this._id);    
+},
+
  "click #sqd":function(){
  Cards.remove(this._id);    },
     "click #addNote": function(){
@@ -105,4 +116,14 @@ Template.HomePage.events({
     }
   })
 }
+});
+Template.HomePage.events({
+  "click #here": function(){
+    var idofthis = Teachers.find({name: Meteor.user().username}).fetch()[0]._id;
+    Teachers.update({_id: idofthis},{$set: {position: 'here'}});
+  },
+  "click #nothere": function(){
+    var idofthis = Teachers.find({name: Meteor.user().username}).fetch()[0]._id;
+    Teachers.update({_id:idofthis},{$set: {position: 'nothere'}});
+  }
 });
